@@ -1,15 +1,26 @@
 {
   "name": "lief",
   "version": "0.1.0",
-  "private": true,
+  "main": "./dist/lief.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "yarn run build:docs && yarn run build:lib",
+    "build:docs": "vue-cli-service build --name lief ./src/main.ts",
+    "build:lib": "vue-cli-service build --target lib --name lief ./src/index.ts",
     "lint": "vue-cli-service lint",
-    "test:e2e": "vue-cli-service test:e2e",
-    "test:unit": "vue-cli-service test:unit"
+    "test": "yarn run test:unit & yarn run test:e2e",
+    "test:unit": "vue-cli-service test:unit",
+    "test:e2e": "vue-cli-service test:e2e"
   },
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
+  ],
   "dependencies": {
+    "current-script-polyfill": "^1.0.0",
     "vue": "^2.5.17"
   },
   "devDependencies": {

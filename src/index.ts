@@ -1,0 +1,2 @@
+import 'current-script-polyfill';
+
