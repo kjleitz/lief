@@ -18,4 +18,22 @@ module.exports = {
     //   },
     // },
   },
+  // This crap is necessary in order to emit declaration files.
+  // See https://github.com/vuejs/vue-cli/issues/1081
+  // TODO: remove when possible
+  parallel: false,
+  chainWebpack(config) {
+    config.module.rule("ts").uses.delete("cache-loader");
+    config.module.rule("tsx").uses.delete("cache-loader");
+    config.module
+      .rule('ts')
+      .use('ts-loader')
+      .loader('ts-loader')
+      .tap((opts) => {
+        /* eslint-disable no-param-reassign */
+        opts.transpileOnly = false;
+        opts.happyPackMode = false;
+        return opts;
+      });
+  },
 };

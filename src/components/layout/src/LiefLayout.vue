@@ -32,18 +32,6 @@ export default Vue.extend({
   components: {
     LiefWrapper,
   },
-
-  props: {
-    leftFixed: {
-      type: Boolean,
-      default: true,
-    },
-
-    rightFixed: {
-      type: Boolean,
-      default: true,
-    },
-  },
 });
 </script>
 
