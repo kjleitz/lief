@@ -1,7 +1,28 @@
 {
   "name": "lief",
   "version": "0.1.0",
-  "main": "./dist/lief.common.js",
+  "main": "dist/lief.common.js",
+  "types": "dist/src/index.d.ts",
+  "description": "Lightweight Vue component library",
+  "author": "Keegan Leitz <kjleitz@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/kjleitz/lief#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kjleitz/lief"
+  },
+  "bugs": {
+    "url": "https://github.com/kjleitz/lief/issues"
+  },
+  "keywords": [
+    "vue",
+    "component",
+    "library",
+    "element",
+    "elementui",
+    "element-ui"
+  ],
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "yarn run build:docs && yarn run build:lib",
