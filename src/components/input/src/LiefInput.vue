@@ -1,6 +1,12 @@
 <template>
   <LiefWrapper class="lief-input-container">
-    <input v-bind="$attrs" class="lief-input" type="text" v-on="$listeners" />
+    <input
+      v-bind="$attrs"
+      :type="type"
+      class="lief-input"
+      :value="value"
+      v-on="$listeners"
+    />
   </LiefWrapper>
 </template>
 
@@ -11,6 +17,18 @@ import LiefWrapper from '@/components/wrapper';
 export default Vue.extend({
   components: {
     LiefWrapper,
+  },
+
+  props: {
+    type: {
+      type: String,
+      default: 'text',
+    },
+
+    value: {
+      type: [String, Number],
+      default: '',
+    },
   },
 });
 </script>

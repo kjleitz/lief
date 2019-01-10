@@ -28,7 +28,7 @@
     "build": "yarn run build:docs && yarn run build:lib",
     "build:docs": "vue-cli-service build --name lief ./src/main.ts",
     "build:lib": "vue-cli-service build --target lib --name lief ./src/index.ts",
-    "lint": "vue-cli-service lint",
+    "lint": "vue-cli-service lint --no-fix",
     "test": "yarn run test:unit & yarn run test:e2e",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e"

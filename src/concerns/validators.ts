@@ -140,7 +140,7 @@ export const isShaped = function(shape: Shape): (obj: { [index: string]: any }) 
       // e.g., rawType === undefined
       return typeof rawType === 'undefined';
     };
-    
+
     const isNull = (rawType: (typeof propTypes[number])): boolean => {
       // e.g., rawType === 'null'
       if (typeof rawType === 'string') return rawType.toLowerCase() === 'null';

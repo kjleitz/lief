@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
-    "target": "ES5",
-    "declaration": true,
-    "declarationDir": "dist",
+    // "target": "ES5",
+    "target": "esnext",
+    // "declaration": true, // TODO: add this as a flag in yarn build:lib script
+    // "declarationDir": "dist", // TODO: same
     "strict": true,
     "jsx": "preserve",
     "importHelpers": true,
